@@ -1,0 +1,41 @@
+//注意:1.生成秘钥,绑定在github上
+//	   2.输入访问的邮箱和密码
+//	   3.建立；连接的路径是ssh > 以git@打头
+
+//git 与 远程 github 建立连接
+//1.创建本地秘钥
+//  ssh-keygen -t rsa -C "youremail@example.com"
+
+//2.进入/c/Users/电脑名/.ssh/id_rsa.pub文件
+//复制生成的秘钥 > 放入到github上 settings设置中
+//下的SSH  添加一个秘钥
+
+//3.输入当前访问的用户人员邮箱和用户名
+//两条单独的命令
+//3.1 git config --global user.name "Your Name"
+//3.2 git config --global user.email "email@example.com"
+
+//4.建立本地与服务器连接
+//在要工作的位置 打开git bash here
+//输入命令 git init  创建初始化git 建立一个git环境
+
+//4.1与远程服务端建立联系
+//通过命令，建立远程连接
+//git remote add origin git@github.com:h5-c3/demoA.git
+
+//5操作新增文件
+//1. 新增文件 index.html
+//2. git status 查看是否有文件进行修改
+//3. git add . 讲刚才所有的修改文件上传到本地的git环境中
+//4. git commit -m '说明字符串' 将刚才上传的数据与本地缓存的文件进行合并
+//5. git push -u origin master 将主支上传到github上
+//5.1第一次使用的是 git push -u origin master
+//5.2 以后每次使用的都是  git push
+
+
+//操作文件
+//查看文件状态  git status
+//增加文件操作  git add 文件名 或git add .
+//合并本地缓存文件 
+
+//上传文件  git push
